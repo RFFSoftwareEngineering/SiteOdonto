@@ -3,10 +3,26 @@
 <head>
     <title>Home</title>
 </head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <body>
-    <p>navbar, time = {{ actual_time }}</p>
-    {% block content %}
-      replace me
-    {% endblock %}
+<style type="text/css">
+    .div1 {
+      text-align: center;
+      color: gray;
+      background-color: rgb(8, 17, 32);
+      height: 160px;
+    }
+</style>
+<div class="div1" >
+    <div class="w3-bar-item">navbar</div>
+    <div class="w3-bar-item">now: {{ actual_time }}</div>
+</div>
+</body>
+<body>
+    <div class="w3-container">
+        {% block content %}
+         replace me
+        {% endblock %}
+    </div>
 </body>
 </html>
