@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
     <title>Home</title>
 </head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,23 +18,47 @@
     }
     .navb {
       text-align: left;
-      padding: 4px;
+      padding: 4px;           
     }
     .div2 {
       text-align: right;
-      padding-top: 80px;
+      padding-top: 20px;
       padding-right: 4px;
     }
     .title {
-      font-family: sans-serif;
+      font-family: "Sofia", sans-serif;
       font-style: italic;
       font-weight: lighter;
-      font-size: 24px;
+      font-size: 28px;
+    }
+    .owner {
+      font-family: "Sofia", sans-serif;
+      font-style: italic;
+      font-weight: bold;
+      font-size: 32px;
+      padding-left: 160px;
+    }
+    .dentinho {
+      width: 120px;
+      height: 120px;
+      float: right;
+      padding-right: 0px;
+    }
+    .dentinho2 {
+      width: 120px;
+      height: 120px;
+      float: left;
     }
 </style>
 <div class="div1" >
-    <div class="navb">navbar</div>
-    <div class="title">Consultório Dra. Márcia</div>
+
+    <div class="navb">
+      {% load static %} <img class="dentinho" src="{% static "tooth_icon.png" %}" alt="dente img">
+      {% load static %} <img class="dentinho2" src="{% static "tooth_icon.png" %}" alt="dente img">
+      navbar
+    </div>
+    <div class="title">Clínica de Cirugia Dentística</div>
+    <div class="owner">Dra. Márcia Benedita Piccolli</div>
     <div class="div2">hora: {{ actual_time }}</div>
 </div>
 </body>
