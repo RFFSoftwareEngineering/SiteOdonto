@@ -15,15 +15,16 @@
       font-family: sans-serif;
       font-weight: bold;
       font-size: 16;
+      width: 100%;
     }
     .navb {
       text-align: left;
-      padding: 4px;           
+      padding: 4px;
     }
     .div2 {
       text-align: right;
-      padding-top: 20px;
-      padding-right: 4px;
+      padding-right: 10px;
+      padding-bottom: 10px;
     }
     .title {
       font-family: "Sofia", sans-serif;
@@ -42,15 +43,45 @@
       width: 120px;
       height: 120px;
       float: right;
-      padding-right: 0px;
     }
     .dentinho2 {
       width: 120px;
       height: 120px;
       float: left;
     }
+    .div3 {
+      text-align: center;
+      color: gray;
+      background-color: rgb(8, 17, 32);
+      height: 100px;
+      font-family: sans-serif;
+      font-weight: bold;
+      font-size: 16;
+      bottom: 0;
+      position: fixed;
+      width: 100%;
+    }
+    .contato {
+      font-family: "Sofia", sans-serif;
+      font-style: italic;
+      font-weight: lighter;
+      font-size: 22px;
+      padding: 5px;
+    }
+    .adr {
+      font-family: "Sofia", sans-serif;
+      font-style: italic;
+      font-weight: lighter;
+      font-size: 18px;
+      padding: 5px;
+    }
+    .dentefeliz {
+      width: 100px;
+      height: 100px;
+      float: left;
+    }
 </style>
-<div class="div1" >
+<div class="div1">
 
     <div class="navb">
       {% load static %} <img class="dentinho" src="{% static "tooth_icon.png" %}" alt="dente img">
@@ -59,7 +90,7 @@
     </div>
     <div class="title">Clínica de Cirugia Dentística</div>
     <div class="owner">Dra. Márcia Benedita Piccolli</div>
-    <div class="div2">hora: {{ actual_time }}</div>
+
 </div>
 </body>
 <body>
@@ -69,4 +100,15 @@
         {% endblock %}
     </div>
 </body>
+
+<div class="div3">
+
+    <div class="contato">
+      {% load static %} <img class="dentefeliz" src="{% static "dente_feliz.png" %}" alt="dente img">
+      Contato: (19)99782-3434
+    </div>
+    <div class="adr">Av. Liberdade 460 Charqueada Centro</div>
+    <div class="div2">hora: {{ actual_time }}</div>
+
+</div>
 </html>
