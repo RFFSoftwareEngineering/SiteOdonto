@@ -9,4 +9,4 @@ def HomePage(request, *args, **kwargs):
     context = {
             "actual_time": now
         }
-    return render(request, "base.html", context)
+    return render(request, "home.html", context)

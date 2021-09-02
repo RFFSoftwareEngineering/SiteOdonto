@@ -2,6 +2,7 @@
 <html>
 <head>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+{% load static %}<link rel="icon" href="{% static "dente_feliz.png" %}">
     <title>Home</title>
 </head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,6 +21,8 @@
     .navb {
       text-align: left;
       padding: 4px;
+      position: absolute;
+      top: 4%;
     }
     .div2 {
       text-align: right;
@@ -43,6 +46,9 @@
       width: 120px;
       height: 120px;
       float: right;
+      position: absolute;
+      top: 4%;
+      right: 1%;
     }
     .dentinho2 {
       width: 120px;
@@ -84,11 +90,12 @@
 <div class="div1">
 
     <div class="navb">
-      {% load static %} <img class="dentinho" src="{% static "tooth_icon.png" %}" alt="dente img">
       {% load static %} <img class="dentinho2" src="{% static "tooth_icon.png" %}" alt="dente img">
       navbar
     </div>
-    <div class="title">Clínica de Cirugia Dentística</div>
+    <div class="title">
+      Clínica Odontológica
+      {% load static %} <img class="dentinho" src="{% static "tooth_icon.png" %}" alt="dente img"></div>
     <div class="owner">Dra. Márcia Benedita Piccolli</div>
 
 </div>

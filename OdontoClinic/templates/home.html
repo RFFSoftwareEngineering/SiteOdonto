@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+<style type="text/css">
+    .container {
+      position: relative;
+      text-align: center;
+      color: white;
+    }
+    .Welcome {
+      position: absolute;
+      top: 4%;
+      left: 3%;
+      font-family: "Trirong", serif;
+      font-size: 25px;
+    }
+</style>
+
+<div class="container">
+    {% load static %} <img class="dentist" src="{% static "dentist.jpg" %}" alt="dentista img">
+    <div class="Welcome">Bem-vindo(a) {{request.user}}, estamos prontos para atendê-lo(a) da melhor maneira possível, dentro das normas e padrões de
+       segurança internacionais estabelecidos por todos os Conselhos Regionais de Odontologia, bem como normas da Anvisa e recomendações da OMS. 
+
+    </div>
+</div>
+{% endblock %}
