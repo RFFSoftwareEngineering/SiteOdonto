@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from datetime import datetime
 
 now = datetime.now().strftime('%H:%M:%S')
@@ -10,3 +10,7 @@ def HomePage(request, *args, **kwargs):
             "actual_time": now
         }
     return render(request, "home.html", context)
+
+def ServicesPage(request):
+    context = {}
+    return render(request, "services.html", context)

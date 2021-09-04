@@ -97,12 +97,23 @@
       color: white;
       text-decoration: none;
     }
-    .navb a.active {
-      background-color: #04AA6D;
-      color: white;
+    .active {
+      color: gray;
       text-decoration: none;
     }
+    .active a:hover {
+      color: white;
+    }
+    .navb a.activeS {
+      color: gray;
+      text-decoration: none;
+    }
+    .navb a.activeS:hover {
+      color: white;
+    }
+
 </style>
+
 <div class="div1">
 
     <div class="navb">
@@ -110,7 +121,7 @@
       <a class="active" href="http://127.0.0.1:8000/">Home</a>
       <a>Agendamento</a>
       <a>Emergência</a>
-      <a>Serviços</a>
+      <a class="activeS" href="http://127.0.0.1:8000/services/">Serviços</a>
     </div>
     <div class="title">
       Clínica Odontológica
