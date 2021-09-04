@@ -15,14 +15,39 @@
       font-family: "Trirong", serif;
       font-size: 25px;
     }
+    .TheDentist {
+      position: absolute;
+      top: 40%;
+      left: 10%;
+      width: 35%;
+      height: auto;
+    }
+    .Textodentist {
+      position: absolute;
+      text-align: left;
+      font-family: "Trirong", serif;
+      font-size: 25px;
+      left: 47%;
+      top: 40%;
+    }
 </style>
 
 <div class="container">
     {% load static %} <img class="dentist" src="{% static "dentist.jpg" %}" alt="dentista img">
+    {% load static %} <img class="TheDentist" src="{% static "Marcia.jpg" %}" alt="A dentista img">
     <div class="Welcome">Bem-vindo(a) {{request.user}}, estamos prontos para atendê-lo(a) da melhor maneira possível, dentro das normas e padrões de
        segurança internacionais estabelecidos por todos os Conselhos Regionais de Odontologia, bem como normas da Anvisa e recomendações da OMS. Sinta-se
        livre para agendar um horário clicando no link Agendamento, navegue pelo site e conheça melhor nossos serviços, são mais de 30 anos de experiência
        consolidada no mercado, trazendo sempre um atendimento de primeira qualidade.
+    </div>
+    <div class="Textodentist">
+      <p>Todos querem tratar com ela e não é atoa,</p>
+      <p>Muito simpática e especialista em </p>
+      <p>tratamento sem dor, a Dra. Márcia</p>
+      <p>é muito procurada por pessoas de toda</p>
+      <p>a região, pacientes relatam:</p>
+      <p>"Não consigo acostumar com outro dentista,</p>
+      <p>trato com a Dra. desde criança!"</p>
     </div>
 </div>
 {% endblock %}
