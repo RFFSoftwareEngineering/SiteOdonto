@@ -19,10 +19,12 @@
       width: 100%;
     }
     .navb {
+      overflow: hidden;
       text-align: left;
       padding: 4px;
       position: absolute;
       top: 4%;
+      text-decoration: none;
     }
     .div2 {
       text-align: right;
@@ -86,12 +88,29 @@
       height: 100px;
       float: left;
     }
+    .navb a {
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    .navb a:hover {
+      background-color: #04AA6D;
+      color: white;
+      text-decoration: none;
+    }
+    .navb a.active {
+      background-color: #04AA6D;
+      color: white;
+      text-decoration: none;
+    }
 </style>
 <div class="div1">
 
     <div class="navb">
       {% load static %} <img class="dentinho2" src="{% static "tooth_icon.png" %}" alt="dente img">
-      navbar
+      <a class="active" href="http://127.0.0.1:8000/">Home</a>
+      <a>Agendamento</a>
+      <a>Emergência</a>
+      <a>Serviços</a>
     </div>
     <div class="title">
       Clínica Odontológica
