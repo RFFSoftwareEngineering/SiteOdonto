@@ -13,7 +13,7 @@ def teste_view(request, id):
 
 def manipulate_view(request):
     form = AgendaForm(request.POST or None)
-    if form is_valid():
+    if form.is_valid():
         form.save()
     context = {
         "form" : form

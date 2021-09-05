@@ -4,7 +4,7 @@ from .models import Agendamento
 
 class AgendaForm(forms.ModelForm):
     class Meta:
-        model = Agenda
+        model = Agendamento
         fields = [
             "PrimeiroNome",
             "Sobrenome",
