@@ -17,7 +17,8 @@ from django.contrib import admin
 from django.urls import path
 from pages.views import HomePage, ServicesPage
 from Agenda.views import (teste_view,
-                          manipulate_view)
+                          manipulate_view,
+                          calendar_view)
 
 
 urlpatterns = [
@@ -26,4 +27,5 @@ urlpatterns = [
     path("services/", ServicesPage, name="servicos"),
     path("Agendamento/<int:id>/", teste_view , name="teste"),
     path("teste", manipulate_view),
+    path("Calendar/", calendar_view, name="calendar"),
 ]

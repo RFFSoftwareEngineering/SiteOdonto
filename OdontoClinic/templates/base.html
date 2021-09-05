@@ -98,8 +98,8 @@
       text-decoration: none;
     }
     .active {
-      color: gray;      
-      text-decoration: none;
+      color: gray;
+      text-decoration: none;      
     }
     .active a:hover {
       color: white;
@@ -111,6 +111,13 @@
     .navb a.activeS:hover {
       color: white;
     }
+    .activeAgen {
+      color: gray;
+      text-decoration: none;
+    }
+    .activeAgen:hover {
+      color: white;
+    }
 </style>
 
 <div class="div1">
@@ -118,7 +125,7 @@
     <div class="navb">
       {% load static %} <img class="dentinho2" src="{% static "tooth_icon.png" %}" alt="dente img">
       <a class="active" href="http://127.0.0.1:8000/">Home</a>
-      <a>Agendamento</a>
+      <a class="activeAgen" href="http://127.0.0.1:8000/Calendar/">Agendamento</a>
       <a>Emergência</a>
       <a class="activeS" href="http://127.0.0.1:8000/services/">Serviços</a>
     </div>
