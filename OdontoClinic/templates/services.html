@@ -2,6 +2,23 @@
 
 {% block content %}
 
-<p>Teste</p>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+<style type="text/css">
+    .services_bg {
+      width: 100%;
+      height: auto;
+    }
+    .endo {
+      position: absolute;
+      top: 30%;
+      left : 5%;
+      width: 300px;
+      height: auto;
+    }
+</style>
+<div class="container_services">
+    {% load static %} <img class="services_bg" src="{% static "dentist-office.jpg" %}" alt="office img">
+    {% load static %} <img class="endo" src="{% static "endo.jpg" %}" alt="endo img">
+</div>
 
 {% endblock %}
