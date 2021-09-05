@@ -38,15 +38,83 @@
       top: 40%;
       right: 7%;
     }
+    .perio {
+      position: absolute;
+      top: 75%;
+      left: 5%;
+      width: 300px;
+      height: 250px;
+    }
+    .perio_text {
+      position: absolute;
+      top: 80%;
+      left: 25%;
+      font-family: "Trirong", serif;
+      font-size: 22px;
+      font-weight: bold;
+    }
+    .est {
+      position: absolute;
+      left: 50%;
+      top: 75%;
+      width: 350px;
+      height: auto;
+    }
+    .est_text {
+      position: absolute;
+      top: 80%;
+      right: 7%;
+      font-family: "Trirong", serif;
+      font-size: 22px;
+      font-weight: bold;
+    }
+    .clar {
+      position: absolute;
+      top: 115%;
+      left: 5%;
+      width: 300px;
+      height: auto;
+    }
+    .clar_text {
+      position: absolute;
+      top: 130%;
+      left: 25%;
+      font-family: "Trirong", serif;
+      font-size: 22px;
+      font-weight: bold;
+    }
+    .geral {
+      position: absolute;
+      top: 115%;
+      left: 50%;
+      width: 300px;
+      height: auto;
+    }
+    .geral_text {
+      position: absolute;
+      top: 115%;
+      right: 17%;
+      font-family: "Trirong", serif;
+      font-size: 22px;
+      font-weight: bold;
+    }
 </style>
 <div class="container_services">
     {% load static %} <img class="services_bg" src="{% static "dentist-office.jpg" %}" alt="office img">
     {% load static %} <img class="endo" src="{% static "endo.jpg" %}" alt="endo img">
     {% load static %} <img class="dentadura" src="{% static "dentadura.jpg" %}" alt="prótese img">
+    {% load static %} <img class="perio" src="{% static "periodontia.png" %}" alt="periodontics img">
+    {% load static %} <img class="est" src="{% static "estética.png" %}" alt="estetica img">
+    {% load static %} <img class="clar" src="{% static "clareamento.jpg" %}" alt="clareamento img">
+    {% load static %} <img class="geral" src="{% static "geral.jpg" %}" alt="clínica geral img">
     <div class="endo_text">
       Especialista em Endodontia
     </div>
-    <div class="dentadura_text">Especialista em prótese dentária</div>
+    <div class="dentadura_text">Especialista em Prótese Dentária</div>
+    <div class="perio_text">Especialista em Periodontia</div>
+    <div class="est_text">Especialista em Estética</div>
+    <div class="clar_text">Especialita em Clareamento</div>
+    <div class="geral_text">Clínica Geral</div>
 </div>
 
 {% endblock %}
