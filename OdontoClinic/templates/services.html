@@ -15,10 +15,38 @@
       width: 300px;
       height: auto;
     }
+    .endo_text {
+      position: absolute;
+      top: 40%;
+      left: 25%;
+      font-family: "Trirong", serif;
+      font-size: 22px;
+      font-weight: bold;
+    }
+    .dentadura {
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      width: 300px;
+      height: auto;
+    }
+    .dentadura_text {
+      position: absolute;
+      font-family: "Trirong", serif;
+      font-size: 22px;
+      font-weight: bold;
+      top: 40%;
+      right: 7%;
+    }
 </style>
 <div class="container_services">
     {% load static %} <img class="services_bg" src="{% static "dentist-office.jpg" %}" alt="office img">
     {% load static %} <img class="endo" src="{% static "endo.jpg" %}" alt="endo img">
+    {% load static %} <img class="dentadura" src="{% static "dentadura.jpg" %}" alt="prótese img">
+    <div class="endo_text">
+      Especialista em Endodontia
+    </div>
+    <div class="dentadura_text">Especialista em prótese dentária</div>
 </div>
 
 {% endblock %}
