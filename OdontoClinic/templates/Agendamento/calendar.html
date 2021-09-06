@@ -112,7 +112,11 @@
 
   <ul class="days">
     {% for subitem in a_lista %}
-        <li>{{subitem}}</li>
+        {% if subitem == 0 %}
+            <li> </li>
+        {% else %}
+            <li>{{subitem}}</li>
+        {% endif %}
     {% endfor %}
   </ul>
 

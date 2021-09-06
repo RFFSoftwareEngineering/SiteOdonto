@@ -43,7 +43,7 @@ obj_calendar = calendar.Calendar()
 for day in obj_calendar.itermonthdays(ano_clean, mes_clean):
     lista_dias.append(day)
 
-lista_dias_clean = list(set(lista_dias))
+lista_dias_clean = []
 
 now = datetime.now().strftime('%H:%M:%S')
 
@@ -79,6 +79,6 @@ def calendar_view(request, *args, **kwargs):
         "object" : obj,
         "ano" : ano_clean,
         "mes" : mes_clean_name,
-        "a_lista" : lista_dias_clean
+        "a_lista" : lista_dias
         }
     return render(request, "Agendamento/calendar.html", context)
