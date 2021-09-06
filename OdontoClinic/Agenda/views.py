@@ -51,6 +51,7 @@ def calendar_view(request, *args, **kwargs):
     context = {
         "dados" : form,
         "actual_time" : now,
-        "object" : obj
+        "object" : obj,
+        "ano" : ano_clean
         }
     return render(request, "Agendamento/calendar.html", context)
