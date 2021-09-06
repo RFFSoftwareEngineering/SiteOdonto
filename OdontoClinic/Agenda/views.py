@@ -12,6 +12,31 @@ mes_clean = int(mes)
 dia = datetime.now().strftime("%d")
 dia_clean = int(dia)
 
+if mes_clean == 1:
+    mes_clean_name = "Janeiro"
+elif mes_clean == 2:
+    mes_clean_name = "Fevereiro"
+elif mes_clean == 3:
+    mes_clean_name = "Março"
+elif mes_clean == 4:
+    mes_clean_name = "Abril"
+elif mes_clean == 5:
+    mes_clean_name = "Maio"
+elif mes_clean == 6:
+    mes_clean_name = "Junho"
+elif mes_clean == 7:
+    mes_clean_name = "Julho"
+elif mes_clean == 8:
+    mes_clean_name = "Agosto"
+elif mes_clean == 9:
+    mes_clean_name = "Setembro"
+elif mes_clean == 10:
+    mes_clean_name = "Outubro"
+elif mes_clean == 11:
+    mes_clean_name = "Novembro"
+elif mes_clean == 12:
+    mes_clean_name = "Dezembro"
+
 lista_dias = []
 obj_calendar = calendar.Calendar()
 
@@ -52,6 +77,7 @@ def calendar_view(request, *args, **kwargs):
         "dados" : form,
         "actual_time" : now,
         "object" : obj,
-        "ano" : ano_clean
+        "ano" : ano_clean,
+        "mes" : mes_clean_name
         }
     return render(request, "Agendamento/calendar.html", context)
