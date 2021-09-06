@@ -11,7 +11,7 @@ mes = datetime.now().strftime("%m")
 mes_clean = int(mes)
 dia = datetime.now().strftime("%d")
 dia_clean = int(dia)
-#agora a parte foda
+
 if mes_clean == 1:
     mes_clean_name = "Janeiro"
 elif mes_clean == 2:
@@ -78,6 +78,7 @@ def calendar_view(request, *args, **kwargs):
         "actual_time" : now,
         "object" : obj,
         "ano" : ano_clean,
-        "mes" : mes_clean_name
+        "mes" : mes_clean_name,
+        "a_lista" : lista_dias_clean
         }
     return render(request, "Agendamento/calendar.html", context)
