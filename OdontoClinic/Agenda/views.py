@@ -11,7 +11,7 @@ mes = datetime.now().strftime("%m")
 mes_clean = int(mes)
 dia = datetime.now().strftime("%d")
 dia_clean = int(dia)
-
+#agora a parte foda
 if mes_clean == 1:
     mes_clean_name = "Janeiro"
 elif mes_clean == 2:
