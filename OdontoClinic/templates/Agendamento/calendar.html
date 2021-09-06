@@ -72,6 +72,14 @@
     background-color: #04AA6D;
     color: white;
   }
+  .today {
+    background-color: #04AA6D;
+  }
+  .days li .notactive:hover {
+    padding: 5px;
+    background-color: #04AA6D;
+    color: white;
+  }
 
 /* Add media queries for smaller screens */
 @media screen and (max-width:720px) {
@@ -114,8 +122,10 @@
     {% for subitem in a_lista %}
         {% if subitem == 0 %}
             <li> </li>
+        {% elif subitem == hoje %}
+            <li><span class="active">{{hoje}}</span></li>
         {% else %}
-            <li>{{subitem}}</li>
+            <li><span class="notactive">{{subitem}}</span></li>
         {% endif %}
     {% endfor %}
   </ul>
