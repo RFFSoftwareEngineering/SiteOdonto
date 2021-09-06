@@ -3,6 +3,22 @@ from django.shortcuts import render, get_object_or_404, redirect
 from .models import Agendamento
 from .forms import AgendaForm
 from datetime import datetime
+import calendar
+
+ano = datetime.now().strftime("%Y")
+ano_clean = int(ano)
+mes = datetime.now().strftime("%m")
+mes_clean = int(mes)
+dia = datetime.now().strftime("%d")
+dia_clean = int(dia)
+
+lista_dias = []
+obj_calendar = calendar.Calendar()
+
+for day in obj_calendar.itermonthdays(ano_clean, mes_clean):
+    lista_dias.append(day)
+
+lista_dias_clean = list(set(lista_dias))
 
 now = datetime.now().strftime('%H:%M:%S')
 
