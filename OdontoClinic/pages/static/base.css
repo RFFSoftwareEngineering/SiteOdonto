@@ -1,0 +1,135 @@
+.div1 {
+  text-align: center;
+  color: gray;
+  background-color: rgb(8, 17, 32);
+  height: 160px;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 16;
+  width: 100%;
+}
+.navb {
+  overflow: hidden;
+  text-align: left;
+  padding: 4px;
+  position: absolute;
+  top: 4%;
+  text-decoration: none;
+}
+.div2 {
+  text-align: right;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+.title {
+  font-family: "Sofia", sans-serif;
+  font-style: italic;
+  font-weight: lighter;
+  font-size: 28px;
+}
+.owner {
+  font-family: "Sofia", sans-serif;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 32px;
+  padding-left: 160px;
+}
+.dentinho {
+  width: 120px;
+  height: 120px;
+  float: right;
+  position: absolute;
+  top: 4%;
+  right: 1%;
+}
+.dentinho2 {
+  width: 120px;
+  height: 120px;
+  float: left;
+}
+.div3 {
+  text-align: center;
+  color: gray;
+  background-color: rgb(8, 17, 32);
+  height: 100px;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 16;
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+}
+.contato {
+  font-family: "Sofia", sans-serif;
+  font-style: italic;
+  font-weight: lighter;
+  font-size: 22px;
+  padding: 5px;
+}
+.adr {
+  font-family: "Sofia", sans-serif;
+  font-style: italic;
+  font-weight: lighter;
+  font-size: 18px;
+  padding: 5px;
+}
+.dentefeliz {
+  width: 100px;
+  height: 100px;
+  float: left;
+}
+.navb a {
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.navb a:hover {
+  background-color: #04AA6D;
+  color: white;
+  text-decoration: none;
+}
+.active {
+  color: gray;
+  text-decoration: none;
+}
+.active a:hover {
+  color: white;
+}
+.navb a.activeS {
+  color: gray;
+  text-decoration: none;
+}
+.navb a.activeS:hover {
+  color: white;
+}
+.activeAgen {
+  color: gray;
+  text-decoration: none;
+}
+.activeAgen:hover {
+  color: white;
+}
+/* Add media queries for smaller screens */
+@media only screen and (max-width:1360px) {
+.navb {
+  overflow: hidden;
+  text-align: left;
+  padding: 2px;
+  position: absolute;
+  top: 4%;
+  text-decoration: none;
+}
+.navb a {
+  padding: 2px 2px;
+  text-decoration: none;
+}
+
+}
+
+@media screen and (max-width: 420px) {
+.weekdays li, .days li {width: 12.5%;}
+.days li .active {padding: 2px;}
+}
+
+@media screen and (max-width: 290px) {
+.weekdays li, .days li {width: 12.2%;}
+}
