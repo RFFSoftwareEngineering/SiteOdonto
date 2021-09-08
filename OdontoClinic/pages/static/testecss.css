@@ -1,0 +1,27 @@
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.Welcome {
+  position: absolute;
+  top: 4%;
+  left: 3%;
+  font-family: "Trirong", serif;
+  font-size: 25px;
+}
+.TheDentist {
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  width: 35%;
+  height: auto;
+}
+.Textodentist {
+  position: absolute;
+  text-align: left;
+  font-family: "Trirong", serif;
+  font-size: 25px;
+  left: 47%;
+  top: 40%;
+}
