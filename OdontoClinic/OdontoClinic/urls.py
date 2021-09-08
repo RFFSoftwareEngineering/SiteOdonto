@@ -19,7 +19,7 @@ from pages.views import HomePage, ServicesPage
 from Agenda.views import (teste_view,
                           manipulate_view,
                           calendar_view,
-                          teste)
+                          marcar_view)
 
 
 urlpatterns = [
@@ -29,5 +29,5 @@ urlpatterns = [
     path("Agendamento/<int:id>/", teste_view , name="teste"),
     path("teste", manipulate_view),
     path("Calendar/", calendar_view, name="calendar"),
-    path("Calendar/<int:lista_dias_clean>/", teste, name="testinho")
+    path("Calendar/<int:lista_dias_clean>/", marcar_view, name="marcar")
 ]

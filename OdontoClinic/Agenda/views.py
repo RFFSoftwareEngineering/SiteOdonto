@@ -86,8 +86,8 @@ def calendar_view(request, *args, **kwargs):
         }
     return render(request, "Agendamento/calendar.html", context)
 
-def teste(request, lista_dias_clean, *args, **kwargs):
+def marcar_view(request, lista_dias_clean, *args, **kwargs):
     context = {
         "links" : lista_dias_clean
         }
-    return render(request, "Agendamento/testinho.html", context)
+    return render(request, "Agendamento/marcar.html", context)
