@@ -43,7 +43,7 @@ obj_calendar = calendar.Calendar()
 for day in obj_calendar.itermonthdays(ano_clean, mes_clean):
     lista_dias.append(day)
 
-lista_dias_clean = []
+lista_dias_clean = list(set(lista_dias))
 
 now = datetime.now().strftime('%H:%M:%S')
 
@@ -71,6 +71,7 @@ def calendar_view(request, *args, **kwargs):
     if form.is_valid():
         form.save()
     x = 1
+    y = 0
     obj = get_object_or_404(Agendamento, id=x)
     obj = Agendamento.objects.get(id=x)
     context = {
@@ -80,6 +81,13 @@ def calendar_view(request, *args, **kwargs):
         "ano" : ano_clean,
         "mes" : mes_clean_name,
         "a_lista" : lista_dias,
-        "hoje" : dia_clean
+        "hoje" : dia_clean,
+        "links" : lista_dias_clean
         }
     return render(request, "Agendamento/calendar.html", context)
+
+def teste(request, lista_dias_clean, *args, **kwargs):
+    context = {
+        "links" : lista_dias_clean
+        }
+    return render(request, "Agendamento/testinho.html", context)
