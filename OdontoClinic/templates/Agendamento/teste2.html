@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+<style type="text/css">
+    .form {
+      text-align: center;
+      font-family: "Trirong", serif;
+      font-size: 20px;
+    }
+</style>
+
+<form class="form" action = "." method="POST">{% csrf_token %}
+	{{ form.as_p }}
+	<input type="submit" value="save" />
+</form>
+
+{% endblock %}

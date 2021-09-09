@@ -30,4 +30,4 @@ urlpatterns = [
     path("teste", manipulate_view),
     path("Calendar/", calendar_view, name="calendar"),
     path("Calendar/<int:lista_dias_clean>/", marcar_view, name="marcar")
-]
+    ]

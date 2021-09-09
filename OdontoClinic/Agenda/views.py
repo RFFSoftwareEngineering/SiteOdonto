@@ -69,15 +69,10 @@ def manipulate_view(request, *args, **kwargs):
 def calendar_view(request, *args, **kwargs):
     form = AgendaForm(request.POST or None)
     if form.is_valid():
-        form.save()
-    x = 1
-    y = 0
-    obj = get_object_or_404(Agendamento, id=x)
-    obj = Agendamento.objects.get(id=x)
+        form.save()      
     context = {
         "dados" : form,
         "actual_time" : now,
-        "object" : obj,
         "ano" : ano_clean,
         "mes" : mes_clean_name,
         "a_lista" : lista_dias,

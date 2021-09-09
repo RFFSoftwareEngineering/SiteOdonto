@@ -10,5 +10,5 @@ class AgendaForm(forms.ModelForm):
             "Sobrenome",
             "Telefone",
             "Dor",
-            "Problema"
+            "Problema",            
         ]
