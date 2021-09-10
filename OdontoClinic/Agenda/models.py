@@ -8,13 +8,6 @@ class Agendamento(models.Model):
     Sobrenome    = models.CharField(max_length=50, blank=False)
     Telefone     = models.CharField(max_length=50, default="(00)00000-0000", blank=False)
     Dor          = models.BooleanField(default=False, blank=False)
-    Problema     = models.TextField(default="descreva o que sente", blank=False)
-    pass
-
-class Marcar(models.Model):
-    pessoa = models.ForeignKey(
-        "Agendamento",
-        on_delete=models.CASCADE,
-    )
-    horario = models.DateTimeField(blank=True)
-    
+    Problema     = models.TextField(default="descreva o problema", blank=False)
+    horario      = models.DateTimeField(blank=False)
+    email        = models.EmailField(blank=False)

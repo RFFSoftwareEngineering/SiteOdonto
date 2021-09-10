@@ -1,5 +1,4 @@
 from django.contrib import admin
-from .models import Agendamento, Marcar
+from .models import Agendamento
 
 admin.site.register(Agendamento)
-admin.site.register(Marcar)
