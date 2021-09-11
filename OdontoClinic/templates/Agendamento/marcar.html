@@ -1,9 +1,20 @@
 {% extends "base.html" %}
 
 {% block content %}
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% load static %}
+<link rel="stylesheet" href="{% static 'marcar.css' %}">
 
-<p>Teste</p>
-<p>{{ links }}</p>
-
+<p class="dia">dia : {{ links }}</p>
+<body>
+<div class="V1">
+    <li>13:30 <a class="H1" href="#">Rafael&nbsp;Furlan</a><a class="H1d" href="#">detalhes</a></li>
+</div>
+<hr class="L1">
+<div class="V2">
+    <li>7:30 <a class="H1">Reservado</a></li>
+</div>
+<div class="V3"></div>
+</body>
 
 {% endblock %}

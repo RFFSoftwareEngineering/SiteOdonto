@@ -1,0 +1,77 @@
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+
+.V1 {
+  border-left: 6px solid #04AA6D;
+  height: 900px;
+  position: absolute;
+  left: 50%;
+  margin-left: -3px;
+  padding-top: 5px;
+}
+.V2 {
+  border-left: 6px solid #04AA6D;
+  height: 900px;
+  position: absolute;
+  left: 0.5%;
+}
+.V3 {
+  border-left: 6px solid #04AA6D;
+  height: 900px;
+  margin-right: -3px;
+  position: absolute;
+  right: 0.2%;
+  top: 226px;
+}
+.dia {
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: bold;
+  text-align: center;
+  font-family: Verdana, sans-serif;
+  color: rgb(64, 64, 64);
+}
+.V1 li {
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: bold;
+  text-align: center;
+  font-family: Verdana, sans-serif;
+  color: rgb(64, 64, 64);
+  padding-left: 4px;
+  padding-top: 4px;
+}
+.V2 li {
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-family: Verdana, sans-serif;
+  color: rgb(64, 64, 64);
+  padding-left: 4px;
+  padding-top: 8px;
+}
+.L1 {
+  height: 6px;
+  width: 100%;
+  color: #04AA6D;
+  background-color: #04AA6D;
+  position: absolute;
+  top: 218px;
+  border: 0;
+}
+.H1 {
+  position: absolute;
+  padding-left: 175px;
+  display: inline-block;
+  text-decoration: none;
+}
+.H1d {
+  position: absolute;
+  padding-left: 570px;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 14px;
+}
