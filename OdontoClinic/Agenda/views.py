@@ -77,7 +77,7 @@ def calendar_view(request, *args, **kwargs):
         "mes" : mes_clean_name,
         "a_lista" : lista_dias,
         "hoje" : dia_clean,
-        "links" : lista_dias_clean
+        "links" : lista_dias_clean        
         }
     return render(request, "Agendamento/calendar.html", context)
 
