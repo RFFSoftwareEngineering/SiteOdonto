@@ -83,6 +83,7 @@ def calendar_view(request, *args, **kwargs):
 
 def marcar_view(request, lista_dias_clean, *args, **kwargs):
     context = {
-        "links" : lista_dias_clean
+        "links" : lista_dias_clean,
+        "actual_time" : now
         }
     return render(request, "Agendamento/marcar.html", context)
