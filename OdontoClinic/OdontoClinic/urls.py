@@ -15,11 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from pages.views import HomePage, ServicesPage
+from pages.views import HomePage
 from Agenda.views import (teste_view,
                           manipulate_view,
                           calendar_view,
-                          marcar_view)
+                          marcar_view,
+                          ServicesPage)
 
 
 urlpatterns = [

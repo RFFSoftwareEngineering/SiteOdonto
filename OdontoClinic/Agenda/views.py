@@ -66,12 +66,8 @@ def manipulate_view(request, *args, **kwargs):
         }
     return render(request, "Agendamento/form_test.html", context)
 
-def calendar_view(request, *args, **kwargs):
-    form = AgendaForm(request.POST or None)
-    if form.is_valid():
-        form.save()      
-    context = {
-        "dados" : form,
+def calendar_view(request, *args, **kwargs):         
+    context = {        
         "actual_time" : now,
         "ano" : ano_clean,
         "mes" : mes_clean_name,
@@ -87,3 +83,10 @@ def marcar_view(request, lista_dias_clean, *args, **kwargs):
         "actual_time" : now
         }
     return render(request, "Agendamento/marcar.html", context)
+
+def ServicesPage(request):
+    context = {
+            "actual_time": now
+        }
+    return render(request, "services.html", context)
+

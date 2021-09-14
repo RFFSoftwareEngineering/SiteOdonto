@@ -11,7 +11,3 @@ def HomePage(request, *args, **kwargs):
             "actual_time": now
         }
     return render(request, "home.html", context)
-
-def ServicesPage(request):
-    context = {}
-    return render(request, "services.html", context)
