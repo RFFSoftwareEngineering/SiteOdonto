@@ -48,6 +48,7 @@ lista_dias_clean = list(set(lista_dias))
 now = datetime.now().strftime('%H:%M:%S')
 
 def teste_view(request, id, *args, **kwargs):
+    now = datetime.now().strftime('%H:%M:%S')
     obj = get_object_or_404(Agendamento, id=id)
     obj = Agendamento.objects.get(id=id)
     context = {
@@ -57,16 +58,19 @@ def teste_view(request, id, *args, **kwargs):
     return render(request, "Agendamento/teste.html", context)
 
 def manipulate_view(request, *args, **kwargs):
+    now = datetime.now().strftime('%H:%M:%S')
     form = AgendaForm(request.POST or None)
     if form.is_valid():
         form.save()
+        form = AgendaForm()
     context = {
         "form" : form,
         "actual_time" : now
         }
     return render(request, "Agendamento/form_test.html", context)
 
-def calendar_view(request, *args, **kwargs):         
+def calendar_view(request, *args, **kwargs):
+    now = datetime.now().strftime('%H:%M:%S')
     context = {        
         "actual_time" : now,
         "ano" : ano_clean,
@@ -78,6 +82,7 @@ def calendar_view(request, *args, **kwargs):
     return render(request, "Agendamento/calendar.html", context)
 
 def marcar_view(request, lista_dias_clean, *args, **kwargs):
+    now = datetime.now().strftime('%H:%M:%S')
     context = {
         "links" : lista_dias_clean,
         "actual_time" : now
@@ -85,6 +90,7 @@ def marcar_view(request, lista_dias_clean, *args, **kwargs):
     return render(request, "Agendamento/marcar.html", context)
 
 def ServicesPage(request):
+    now = datetime.now().strftime('%H:%M:%S')
     context = {
             "actual_time": now
         }

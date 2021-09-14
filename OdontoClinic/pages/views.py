@@ -7,6 +7,7 @@ now = datetime.now().strftime('%H:%M:%S')
 def HomePage(request, *args, **kwargs):
     print(args, kwargs)
     print(request.user)
+    now = datetime.now().strftime('%H:%M:%S')
     context = {
             "actual_time": now
         }
