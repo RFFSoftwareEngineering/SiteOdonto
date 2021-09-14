@@ -28,7 +28,7 @@ urlpatterns = [
     path("", HomePage, name="home"),
     path("services/", ServicesPage, name="servicos"),
     path("Agendamento/<int:id>/", teste_view , name="teste"),
-    path("teste", manipulate_view),
+    path("Calendar/<int:lista_dias_clean>/livre", manipulate_view),
     path("Calendar/", calendar_view, name="calendar"),
     path("Calendar/<int:lista_dias_clean>/", marcar_view, name="marcar")
     ]

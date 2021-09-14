@@ -59,7 +59,10 @@ def teste_view(request, id, *args, **kwargs):
 
 def manipulate_view(request, *args, **kwargs):
     now = datetime.now().strftime('%H:%M:%S')
-    form = AgendaForm(request.POST or None)
+    initial_data = {
+        "horario" : "2021-09-15 14:00:00"
+    }
+    form = AgendaForm(request.POST or None, initial=initial_data)
     if form.is_valid():
         form.save()
         form = AgendaForm()    
@@ -83,6 +86,7 @@ def calendar_view(request, *args, **kwargs):
 
 def marcar_view(request, lista_dias_clean, *args, **kwargs):
     now = datetime.now().strftime('%H:%M:%S')
+    global x
     x = lista_dias_clean
     print(x)
     context = {
