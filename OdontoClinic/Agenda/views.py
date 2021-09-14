@@ -62,7 +62,7 @@ def manipulate_view(request, *args, **kwargs):
     form = AgendaForm(request.POST or None)
     if form.is_valid():
         form.save()
-        form = AgendaForm()
+        form = AgendaForm()    
     context = {
         "form" : form,
         "actual_time" : now
@@ -70,7 +70,7 @@ def manipulate_view(request, *args, **kwargs):
     return render(request, "Agendamento/form_test.html", context)
 
 def calendar_view(request, *args, **kwargs):
-    now = datetime.now().strftime('%H:%M:%S')
+    now = datetime.now().strftime('%H:%M:%S')    
     context = {        
         "actual_time" : now,
         "ano" : ano_clean,
@@ -83,6 +83,8 @@ def calendar_view(request, *args, **kwargs):
 
 def marcar_view(request, lista_dias_clean, *args, **kwargs):
     now = datetime.now().strftime('%H:%M:%S')
+    x = lista_dias_clean
+    print(x)
     context = {
         "links" : lista_dias_clean,
         "actual_time" : now
